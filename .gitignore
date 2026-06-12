@@ -156,10 +156,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
+venv/
 
 # Rope project settings
 .ropeproject
