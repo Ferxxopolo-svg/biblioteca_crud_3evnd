@@ -1,17 +1,17 @@
 # DAO: Data Access Object
 # Es una clase que se encarga acceder a la base de datos y realizar las operaciones
 
-from database.conexion import conexion
+from database.conexion import Conexion
 from models.libros import Libro
 
 class LibroDAO:
 
     # Select * from libros
     def obtener_libros(self):
-        conexion = conexion.obtener_conexion()
+        conexion = Conexion.obtener_conexion()
         cursor = conexion.cursor()
 
-        cursor.execute("SELECT * FROM libros")
+        cursor.execute("SELECT * FROM libro")
 
         registros = cursor.fetchall() 
 

@@ -2,6 +2,7 @@ from dao.libro_dao import LibroDAO
 from models.libros import Libro
 
 def main():
+    print("Biblioteca universitaria")
     try:
         libro_dao = LibroDAO()
         libros = libro_dao.obtener_libros()
@@ -17,5 +18,5 @@ def main():
     except Exception as e:
         print(f"Error al conectar a la base de datos: {e}")
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()

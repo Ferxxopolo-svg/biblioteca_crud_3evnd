@@ -3,10 +3,10 @@ import psycopg2
 
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(encoding="latin-1")
 
 
-class conexion:
+class Conexion:
 
     @staticmethod
     def obtener_conexion():
@@ -15,5 +15,6 @@ class conexion:
             database = os.getenv("DB_NAME"),
             user = os.getenv("DB_USER"),
             password = os.getenv("DB_PASSWORD"),
-            port = os.getenv("DB_PORT")
+            port = os.getenv("DB_PORT"),
+            client_encoding = "WINDOWS1252"
         )
