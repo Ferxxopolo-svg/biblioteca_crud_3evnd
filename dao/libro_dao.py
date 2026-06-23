@@ -11,7 +11,7 @@ class LibroDAO:
         conexion = Conexion.obtener_conexion()
         cursor = conexion.cursor()
 
-        cursor.execute("SELECT * FROM libro")
+        cursor.execute("SELECT * FROM vista_libros")
 
         registros = cursor.fetchall() 
 
